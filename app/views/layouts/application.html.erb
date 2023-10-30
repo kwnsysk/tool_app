@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToolApp</title>
+    <title>仮装ブキチ杯ツール</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +9,28 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column vh-100">
+    
+    <header class="shadow-sm">
+        <div class="container">
+            <li class="nav-item">
+              <%= link_to "トップページ", root_path, class: 'nav-link text-dark' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "このサイトについて", about_path, class: 'nav-link text-dark' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "仮装ブキチ杯ルーレットツールはこちらから", tool_path, class: 'nav-link text-dark' %>
+            </li>
+      </div>
+    </header>
+    
+    
+    <main>
+    <div class="container">
     <%= yield %>
+    </div>
+    </main>
+    
   </body>
 </html>
